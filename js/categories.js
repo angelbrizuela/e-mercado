@@ -56,6 +56,7 @@ function showCategoriesList(){
                             <small class="text-muted">` + category.productCount + ` artículos</small>
                         </div>
                         <p class="mb-1">` + category.description + `</p>
+                        </div>
                     </div>
                 </div>
             </a>
