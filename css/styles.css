@@ -136,9 +136,7 @@ a.custom-card:hover {
   text-decoration: inherit;
 }
 
-.checked {
-  color: orange;
-}
+
 
 
 #info-user{
@@ -150,5 +148,37 @@ a.custom-card:hover {
  
 }
 
+.cajaTexto {
+  width: 100%;
+  height: 84%;
+  max-width: 100%;
+  min-width: 100%;
+}
 
+.checked {
+  color: orange;
+}
+
+.star-rating {
+  direction: rtl;
+  display: inline-block;
+  padding: 20px
+}
+
+.star-rating input[type=radio] {
+  display: none
+}
+
+.star-rating label {
+  color: rgb(133, 142, 192);
+  font-size: 40px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type=radio]:checked ~ label {
+  color: #ffbf00
+}
 

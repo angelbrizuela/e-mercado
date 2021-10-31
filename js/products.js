@@ -44,40 +44,46 @@ function showProducts(array) {
         if (((minCost == undefined) || (minCost != undefined && parseInt(products.cost) >= minCost)) &&
             ((maxCost == undefined) || (maxCost != undefined && parseInt(products.cost) <= maxCost))) {
 
+     htmlContentToAppend += `
+                 <div class="col-sm-3">
+                 <a href="product-info.html" class="">
+                     <div class="">
+                         <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
+                     </div>
+                     <div class="">
+                         <div class="d-flex w-100 justify-content-between">
+                             <h4 class="mb-1">`+ products.name + `</h4>
+                            </div>
+                              <p class="mb-1">` + products.description + `</p> <br>
+                              <p class="mb-1"> ` + products.cost + ` ` + products.currency + `<p/> 
+                              <small class="text-muted">` + products.soldCount + ` unidades vendidas</small>
 
-            htmlContentToAppend += `
-        <div class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ products.name + `</h4>
-                       </div>
-                         <p class="mb-1">` + products.description + `</p> <br>
-                         <p class="mb-1"> ` + products.cost + ` ` + products.currency + `<p/> 
-                         <small class="text-muted">` + products.soldCount + ` unidades vendidas</small>
-                </div>
-            </div>
-        </div>
-        `
+                     </div>
+                 </div>
+                 </a>
+             `
+//             htmlContentToAppend += `
+        
+            
+       
+//        <a href="product-info.html" class="list-group-item list-group-item-action">
+//        <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
+//        <div class="d-flex w-100 justify-content-between">
+//        <h4 class="mb-1">`+ products.name + `</h4>
+//        </div>
+//        <p class="mb-1">` + products.description + `</p> <br>
+//        <p class="mb-1"> ` + products.cost + ` ` + products.currency + `<p/> 
+//        <small class="text-muted">` + products.soldCount + ` unidades vendidas</small>
+//        </a>      
+
+// `
+
         }
         document.getElementById("cat-list-products").innerHTML = htmlContentToAppend;
     }
 }
 
-/*------------ Esta parte de codigo la tuve que cambiar para esta nueva funcionalidad------------
 
-document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData(URL_PRODUCTOS).then(function (resultado) {
-        if (resultado.status === "ok") {
-            productsArray = resultado.data;
-            showProducts(productsArray);
-        }
-    });
-});
---------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(URL_PRODUCTOS).then(resultado => {
         productsArray = resultado.data;

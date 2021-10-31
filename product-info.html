@@ -13,26 +13,105 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block" href="inicio.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-    </div>
+      
+
+           
+<div class="btn-group">
+<button type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="user" >
+</button>
+<div class="dropdown-menu">
+  <a class="dropdown-item" href="cart.html">Ver mi carrito</a>
+  <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" id="salir" href="index.html">Cerrar sesion</a>
+</div>
+</div>
+
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="">
+
+        <form class="container" action="">
+          <div class="">
+            <div id="contenido"></div>
+          </div>
+
+          <div class="container  text-center">
+            <div id="imagenes"></div>
+          </div><br><br><br><br>
+
+          <div class="container text-center" >
+            <p><strong>Productos Relacionados</strong></p>
+            <div id="relatedProducts" ></div>
+          </div><br><br><br><br>
+
+          <div class="container text-center">
+            <p><strong>COMENTARIOS</strong></p>
+            <div id="comentarios"></div>
+          </div>
+
+         
+
+          <div id="ContenedorComentarioNuevo">
+            <p>Dejanos tu comentario:</p>
+            <textarea id="comentarionuevo" class="cajaTexto" placeholder="Comentario">
+          </textarea>
+
+            <div id="stars">
+
+              <div class="star-rating">
+                <input id="star-5" type="radio" name="rating" value="5" />
+                <label for="star-5" title="5 stars">
+                  <i class="active fa fa-star"></i>
+                </label>
+
+                <input id="star-4" type="radio" name="rating" value="4" />
+                <label for="star-4" title="4 stars">
+                  <i class="active fa fa-star"></i>
+                </label>
+
+                <input id="star-3" type="radio" name="rating" value="3" />
+                <label for="star-3" title="3 stars">
+                  <i class="active fa fa-star"></i>
+                </label>
+
+                <input id="star-2" type="radio" name="rating" value="2" />
+                <label for="star-2" title="2 stars">
+                  <i class="active fa fa-star"></i>
+                </label>
+
+                <input id="star-1" type="radio" name="rating" value="1" checked />
+                <label for="star-1" title="1 star">
+                  <i class="active fa fa-star"></i>
+                </label>
+
+              </div>
+
+
+
+            </div>
+            <button id="enviarcomentario" class="btn btn-warning" type="button">Comentar</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
+
+  
+
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -54,6 +133,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+
 </body>
 
 </html>
